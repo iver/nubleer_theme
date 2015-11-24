@@ -1,0 +1,12 @@
+name = "Nubleer theme"
+license = "MIT"
+licenselink = "https://github.com/ivan-iver/nubleer-theme/blob/master/LICENSE.md"
+description = "Theme for Nubleer's technical documentation."
+homepage = "https://github.com/ivan-iver/nubleer-theme"
+tags = ["blog"]
+features = ["Material Design","Pagination","Tags","Categories","Highlighting source code","Cover image","Social links"]
+min_version = 0.14
+
+[author]
+  name = "iver"
+  homepage = "http://github.com/ivan-iver/"
