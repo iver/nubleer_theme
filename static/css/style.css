@@ -46,3 +46,40 @@ p {
 footer.page-footer {
   margin: 0;
 }
+.method {
+  color: #cb4b16;
+  font-size: 14px;
+}
+
+.subsection{
+ background-color:#82cafa;
+  padding-left: 10px;
+}
+
+pre{
+  overflow-x: auto;
+  overflow-y: scroll;
+  overflow: auto;
+  max-height:350px;
+  background-color: black;
+  color: deepskyblue;
+}
+
+.time-line{
+  border-top: solid 1px #3090C7;
+  border-bottom: solid 1px #3090C7;
+  padding: 10px 0;
+  margin: 20px 0;
+}
+
+.card-content h2 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.card-content .categories{
+
+}
+.card-content h3 {
+  font-size: 0.9em;
+  font-weight: bold;
+}
