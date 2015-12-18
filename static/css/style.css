@@ -1,11 +1,43 @@
 /* Custom Stylesheet */
 
+h1{
+  font-size: 2rem;
+  line-height: 90%;
+  text-transform: uppercase;
+  color: #ee6e73;
+  border-bottom: 1px solid yellowgreen;
+}
+
+h2 {
+  font-size: 1.56rem;
+  text-decoration: underline;
+}
+
+h3 .section{
+  font-size: 1.7rem;
+  text-decoration: underline;
+  color: #ee6e73;
+}
+h4 {
+  font-size: 1.2rem;
+}
+
+li code{
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #f0f0f0;
+}
+
+hr {
+  color: yellowgreen;
+}
 nav ul a,
 nav .brand-logo {
   color: #444;
 }
 p {
-  line-height: 2em;
+  line-height: 2rem;
 }
 
 .button-collapse {
@@ -52,8 +84,12 @@ footer.page-footer {
 }
 
 .subsection{
- background-color:#82cafa;
+  background-color:#bbdefb;
   padding-left: 10px;
+  padding: 0px 10px;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  /*border-bottom: 1px solid #ee6e73;*/
 }
 
 pre{

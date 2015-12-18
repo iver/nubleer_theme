@@ -11,7 +11,7 @@
           <p>
           {{if .Params.categories }}
             {{ range $index, $category := .Params.categories }}
-              <a href="{{$baseurl}}/categories/{{ $category | urlize }}/">{{ $category }}</a>
+              <a class="waves-effect waves-light btn" href="{{$baseurl}}/categories/{{ $category | urlize }}/">{{ $category }}</a>
             {{ end }}
           {{end}}
           </p>
