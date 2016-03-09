@@ -6,31 +6,46 @@
 <div class="row">
   {{ end }}
   <div class="col m4 s12">
-    <div class="card blue lighten-5">
+    <div class="card blue lighten-5 medium">
       <div class="card-content">
-        <span class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></span>
-        <p class="categories">
-        {{if .Params.categories }}
-        {{ range $index, $category := .Params.categories }}
-        <a class="waves-effect waves-light btn" href="{{$baseurl}}/categories/{{ $category | urlize }}/">{{ $category }}</a>
-        {{ end }}
-        {{end}}
-        </p>
-        <p>{{ .Summary }}</p>
-        {{ if .Truncated }}
-        <div class="read-more-link right-align">
-          <a href="{{ .RelPermalink }}">Leer más…</a>
-        </div>
-        {{ end }}
-        {{ .Date.Format "2 Jan 2006" }}
-        {{if .Params.tags }}
-          <div class="card-action">
-          {{ range $index, $tag := .Params.tags }}
-            <a href="{{$baseurl}}/tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
-            {{ end }}
+        <span class="card-title activator"><a class="teal-text text-darken-2" href="{{ .Permalink }}">{{ .Title }}</a><i class="material-icons right">more_vert</i></span>
+          <div class="row right-align">
+            <div class="col m12">
+                {{if .Params.categories }}
+                  {{ range $index, $category := .Params.categories }}
+                    <div class="chip teal lighten-1 right-align"><a class="white-text waves-effect" href="{{$baseurl}}/categories/{{ $category | urlize }}/">{{ $category }}</a></div>
+                  {{ end }}
+                {{end}}
+            </div>
+          </div> <!-- row -->
+          <div class="row">
+            <p>{{ .Description}}</p>
           </div>
-        {{end}}
+          <div class="row">
+            {{ if .Truncated }}
+              <div class="col m12 read-more-link right-align">
+                  <a href="{{ .RelPermalink }}">Leer más…</a>
+              </div>
+            {{ end }}
+            <div class="right-align">
+              <blockquote>
+              {{ .Date.Format "2006/01/02" }}
+              </blockquote>
+            </div>
+          </div> <!-- row -->
+
       </div> <!-- card-content -->
+      <div class="card-action">
+        {{if .Params.tags }}
+          {{ range $index, $tag := .Params.tags }}
+              <a class="text-cyan" href="{{$baseurl}}/tags/{{ $tag | urlize }}/">{{ $tag }}</a>
+            {{ end }}
+        {{end}}
+      </div>
+      <div class="card-reveal teal lighten-4">
+          <span class="card-title text-grey text-darken-4">{{ .Title }}<i class="material-icons right">close</i></span>
+          <p>{{ .Summary }}</p>
+      </div>
     </div> <!-- card blue -->
   </div>
   {{ end }}
